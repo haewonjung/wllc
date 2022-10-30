@@ -43,7 +43,7 @@ public class BBSLoneMasterDAO extends EgovAbstractMapper {
      * @param BoardMaster
      */
     public int insertMaster(BoardMaster boardMaster) throws Exception {
-	return (int)insert("BBSLoneMasterDAO.insertMaster", boardMaster);
+	return insert("BBSLoneMasterDAO.insertMaster", boardMaster);
     }
 
     /**

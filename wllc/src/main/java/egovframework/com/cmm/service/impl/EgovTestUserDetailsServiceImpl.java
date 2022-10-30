@@ -25,15 +25,13 @@ import org.egovframe.rte.fdl.cmmn.EgovAbstractServiceImpl;
  *  </pre>
  */
 
-public class EgovTestUserDetailsServiceImpl extends EgovAbstractServiceImpl implements
-		EgovUserDetailsService {
+public class EgovTestUserDetailsServiceImpl extends EgovAbstractServiceImpl implements EgovUserDetailsService {
 
 	@Override
 	public Object getAuthenticatedUser() {
 
 		LoginVO loginVO = new LoginVO();
 		loginVO.setId("TEST1");
-		loginVO.setPassword("raHLBnHFcunwNzcDcfad4PhD11hHgXSUr7fc1Jk9uoQ=");
 		loginVO.setUserSe("USR");
 		loginVO.setEmail("egovframe@nia.or.kr");
 		loginVO.setIhidNum("");
@@ -42,17 +40,12 @@ public class EgovTestUserDetailsServiceImpl extends EgovAbstractServiceImpl impl
 		loginVO.setUniqId("USRCNFRM_00000000000");
 		return loginVO;
 
-		// return
-		// RequestContextHolder.getRequestAttributes().getAttribute("loginVO",
-		// RequestAttributes.SCOPE_SESSION);
-
 	}
 
 	@Override
 	public List<String> getAuthorities() {
 
 		// 권한 설정을 리턴한다.
-
 		List<String> listAuth = new ArrayList<String>();
 		listAuth.add("IS_AUTHENTICATED_ANONYMOUSLY");
 		listAuth.add("IS_AUTHENTICATED_FULLY");
@@ -67,20 +60,6 @@ public class EgovTestUserDetailsServiceImpl extends EgovAbstractServiceImpl impl
 
 	@Override
 	public Boolean isAuthenticated() {
-		// 인증된 유저인지 확인한다.
-
-		/*if (RequestContextHolder.getRequestAttributes() == null) {
-			return false;
-		} else {
-
-			if (RequestContextHolder.getRequestAttributes().getAttribute(
-					"loginVO", RequestAttributes.SCOPE_SESSION) == null) {
-				return false;
-			} else {
-				return true;
-			}
-		}*/
-
 		return true;
 	}
 

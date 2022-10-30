@@ -19,7 +19,6 @@ import java.io.Serializable;
  * </pre>
  */
 public class EgovMainContentsVO implements Serializable {
-
 	/**
 	 * serialVersionUID
 	 */
@@ -32,6 +31,19 @@ public class EgovMainContentsVO implements Serializable {
 	 * To-Do List 항목 별 업무화면 URL
 	 */
 	private String workItemURL;
+
+	public EgovMainContentsVO(){
+
+	}
+
+	/**
+	 * 
+	 * @exception Throwable
+	 */
+	public void finalize()
+	  throws Throwable{
+
+	}
 
 	/**
 	 * getItemCount 항목 개수 getter
@@ -56,4 +68,32 @@ public class EgovMainContentsVO implements Serializable {
 	public String getWorkItemURL(){
 		return workItemURL;
 	}
+
+	/**
+	 * setItemCount 항목 개수 setter
+	 * 
+	 * @param itemCount    itemCount
+	 */
+	public void setItemCount(int itemCount){
+
+	}
+
+	/**
+	 * setWorkItemName To-Do List 항목 명 Setter
+	 * 
+	 * @param workItemName    To-Do List 항목 명
+	 */
+	public void setWorkItemName(String workItemName){
+
+	}
+
+	/**
+	 * setWorkItemURL 업무화면 URL setter
+	 * 
+	 * @param workItemURL    업무화면 URL
+	 */
+	public void setWorkItemURL(String workItemURL){
+
+	}
+
 }

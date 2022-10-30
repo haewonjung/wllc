@@ -2,6 +2,7 @@ package egovframework.com.cmm.service;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -218,13 +219,13 @@ public class EgovProperties{
 					}
 				}
 			}
-		} catch (Exception ex){
+		} catch (IOException ex){
 			debug("EX:"+ex);
 		} finally {
 			try {
 				if (fis != null) fis.close();
-			} catch (Exception ex) {
-				debug("EX:"+ex);
+			} catch (IOException ex) {
+				debug("EX:"+ex);//ex.printStackTrace();
 			}
 		}
 
@@ -237,6 +238,8 @@ public class EgovProperties{
 	 */
 	private static void debug(Object obj) {
 		if (obj instanceof java.lang.Exception) {
+			//((Exception)obj).printStackTrace();
+			//System.out.println("DEBUG: " + obj);	// 2011.10.10 보안점검 후속조치
 			LOGGER.debug("IGNORED: {}", ((Exception)obj).getMessage());
 		}
 	}

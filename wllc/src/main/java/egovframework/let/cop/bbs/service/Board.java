@@ -10,23 +10,20 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * @since 2009.03.06
  * @version 1.0
  * @see
- *
+ *  
  * <pre>
  * << 개정이력(Modification Information) >>
- *
+ * 
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
  *  2009.03.06  이삼섭          최초 생성
- *  2011.08.31  JJY            경량환경 템플릿 커스터마이징버전 생성
- *
+ *  2011.08.31  JJY            경량환경 템플릿 커스터마이징버전 생성 
+ *  
  *  </pre>
  */
+@SuppressWarnings("serial")
 public class Board implements Serializable {
 
-	/**
-	 *  serialVersion UID
-	 */
-	private static final long serialVersionUID = -8868310931851410226L;
 	/**
 	 * 게시물 첨부파일 아이디
 	 */
@@ -114,12 +111,12 @@ public class Board implements Serializable {
 	/**
 	 * 게시 종료일
 	 */
-	private String ntceEnddeView = "";
+	private String ntceEnddeView = ""; 
 	/**
 	 * 게시 시작일
 	 */
 	private String ntceBgndeView = "";
-
+	
 	/**
 	 * atchFileId attribute를 리턴한다.
 	 * @return the atchFileId

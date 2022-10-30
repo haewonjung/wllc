@@ -28,6 +28,7 @@ import org.springframework.stereotype.Service;
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
  *   2009.04.01  이중호          최초 생성
+ *   2011.08.31  JJY            경량환경 템플릿 커스터마이징버전 생성
  *
  * </pre>
  */
@@ -40,7 +41,7 @@ public class EgovCalRestdeManageServiceImpl extends EgovAbstractServiceImpl impl
 	/**
 	 * 일반달력 팝업 정보를 조회한다.
 	 */
-	@Override
+    @Override
 	public List<?> selectNormalRestdePopup(Restde restde) throws Exception {
 		return restdeManageDAO.selectNormalRestdePopup(restde);
 	}
@@ -48,7 +49,7 @@ public class EgovCalRestdeManageServiceImpl extends EgovAbstractServiceImpl impl
 	/**
 	 * 행정달력 팝업 정보를 조회한다.
 	 */
-	@Override
+    @Override
 	public List<?> selectAdministRestdePopup(Restde restde) throws Exception {
 		return restdeManageDAO.selectAdministRestdePopup(restde);
 	}
@@ -96,7 +97,7 @@ public class EgovCalRestdeManageServiceImpl extends EgovAbstractServiceImpl impl
     /**
 	 * 행정달력 월간 휴일을 조회한다.
 	 */
-	@Override
+    @Override
 	public List<?> selectAdministMonthRestde(Restde restde) throws Exception {
 		return restdeManageDAO.selectAdministMonthRestde(restde);
 	}

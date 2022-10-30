@@ -25,8 +25,8 @@ public class EgovComTraceHandler implements TraceHandler {
     /**
      * 발생된 메시지를 출력한다.
      */
-    public void todo(Class<?> clazz, String message) {
-    	//System.out.println("log ==> DefaultTraceHandler run...............");
+    @Override
+	public void todo(Class<?> clazz, String message) {
     	LOGGER.debug("[TRACE]CLASS::: {}", clazz.getName());
     	LOGGER.debug("[TRACE]MESSAGE::: {}", message);
     	//이곳에서 후속처리로 필요한 액션을 취할 수 있다.

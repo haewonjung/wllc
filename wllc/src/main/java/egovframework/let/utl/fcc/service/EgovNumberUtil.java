@@ -24,6 +24,23 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+/**
+ * 숫자 데이터 처리 관련 유틸리티
+ * @author 공통서비스개발팀 이삼섭
+ * @since 2009.02.13
+ * @version 1.0
+ * @see
+ *
+ * <pre>
+ * << 개정이력(Modification Information) >>
+ *
+ *   수정일      수정자           수정내용
+ *  -------    --------    ---------------------------
+ *   2009.02.13  이삼섭          최초 생성
+ *   2011.08.31  JJY            경량환경 템플릿 커스터마이징버전 생성
+ *
+ * </pre>
+ */
 
 public class EgovNumberUtil {
 
@@ -37,7 +54,7 @@ public class EgovNumberUtil {
      * @return 랜덤숫자
      * @see
      */
-    public static int getRandomNum(int startNum, int endNum) {
+	public static int getRandomNum(int startNum, int endNum) {
 		int randomNum = 0;
 
 		// 랜덤 객체 생성
@@ -59,8 +76,8 @@ public class EgovNumberUtil {
      * @return 존재여부
      * @see
      */
-    public static Boolean getNumSearchCheck(int sourceInt, int searchInt) {
-    	String sourceStr = String.valueOf(sourceInt);
+	public static Boolean getNumSearchCheck(int sourceInt, int searchInt) {
+		String sourceStr = String.valueOf(sourceInt);
 		String searchStr = String.valueOf(searchInt);
 
 		// 특정숫자가 존재하는지 하여 위치값을 리턴한다. 없을 시 -1
@@ -69,7 +86,7 @@ public class EgovNumberUtil {
 		} else {
 			return true;
 		}
-    }
+	}
 
     /**
      * 숫자타입을 문자열로 변환하는 기능 숫자 20081212를 문자열 '20081212'로 변환하는 기능
@@ -78,14 +95,13 @@ public class EgovNumberUtil {
      * @return 문자열
      * @see
      */
-    public static String getNumToStrCnvr(int srcNumber) {
+	public static String getNumToStrCnvr(int srcNumber) {
 		String rtnStr = null;
 
 		rtnStr = String.valueOf(srcNumber);
 
 		return rtnStr;
-    }
-
+	}
 
     /**
      * 숫자타입을 데이트 타입으로 변환하는 기능
@@ -138,7 +154,6 @@ public class EgovNumberUtil {
 	public static Boolean getNumberValidCheck(String checkStr) {
 
 		int i;
-		//String sourceStr = String.valueOf(sourceInt);
 
 		int checkStrLt = checkStr.length();
 
@@ -153,7 +168,7 @@ public class EgovNumberUtil {
 		}
 
 		return true;
-    }
+	}
 
     /**
      * 특정숫자를 다른 숫자로 치환하는 기능 숫자 12345678에서 123를 999로 변환하는 기능을 제공(99945678)
@@ -165,7 +180,7 @@ public class EgovNumberUtil {
      * @see
      */
 
-    public static int getNumberCnvr(int srcNumber, int cnvrSrcNumber, int cnvrTrgtNumber) {
+	public static int getNumberCnvr(int srcNumber, int cnvrSrcNumber, int cnvrTrgtNumber) {
 
 		// 입력받은 숫자를 문자열로 변환
 		String source = String.valueOf(srcNumber);
@@ -184,9 +199,9 @@ public class EgovNumberUtil {
 			rtnStr.append(preStr).append(object); // 변환대상위치 숫자에 변환할 숫자를 붙여준다.
 		}
 		rtnStr.append(nextStr); // 변환대상 숫자 이후 숫자를 붙여준다.
-
-	return Integer.parseInt(rtnStr.toString());
-    }
+		
+		return Integer.parseInt(rtnStr.toString());
+	}
 
     /**
      * 특정숫자가 실수인지, 정수인지, 음수인지 체크하는 기능 123이 실수인지, 정수인지, 음수인지 체크하는 기능을 제공함

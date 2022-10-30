@@ -32,7 +32,7 @@ public class BBSAddedOptionsDAO extends EgovAbstractMapper {
      * @param BoardMaster
      */
     public int insertAddedOptionsInf(BoardMaster boardMaster) throws Exception {
-	return (int)insert("BBSAddedOptionsDAO.insertAddedOptionsInf", boardMaster);
+	return insert("BBSAddedOptionsDAO.insertAddedOptionsInf", boardMaster);
     }
     
     /**

@@ -43,7 +43,7 @@ public class BBSAttributeManageDAO extends EgovAbstractMapper {
      * @param BoardMaster
      */
     public int insertBBSMasterInf(BoardMaster boardMaster) throws Exception {
-	return (int)insert("BBSAttributeManageDAO.insertBBSMasterInf", boardMaster);
+	return insert("BBSAttributeManageDAO.insertBBSMasterInf", boardMaster);
     }
 
     /**
@@ -157,7 +157,7 @@ public class BBSAttributeManageDAO extends EgovAbstractMapper {
      * @return
      * @throws Exception
      */
-	public int selectNotUsedBdMstrListCnt(BoardMasterVO vo) throws Exception {
+    public int selectNotUsedBdMstrListCnt(BoardMasterVO vo) throws Exception {
 	return (Integer)selectOne("BBSAttributeManageDAO.selectNotUsedBdMstrListCnt", vo);
     }
 }

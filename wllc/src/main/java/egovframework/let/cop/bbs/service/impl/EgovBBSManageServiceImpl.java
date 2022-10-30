@@ -14,6 +14,7 @@ import egovframework.let.cop.bbs.service.EgovBBSManageService;
 import egovframework.let.utl.fcc.service.EgovDateUtil;
 
 import org.egovframe.rte.fdl.cmmn.EgovAbstractServiceImpl;
+import org.egovframe.rte.fdl.cmmn.trace.LeaveaTrace;
 import org.egovframe.rte.fdl.property.EgovPropertyService;
 
 import javax.annotation.Resource;
@@ -48,6 +49,8 @@ public class EgovBBSManageServiceImpl extends EgovAbstractServiceImpl implements
 
     @Resource(name = "propertiesService")
     protected EgovPropertyService propertyService;
+
+    @Resource(name="leaveaTrace") LeaveaTrace leaveaTrace;
 
     /**
      * 게시물 한 건을 삭제 한다.
@@ -157,7 +160,7 @@ public class EgovBBSManageServiceImpl extends EgovAbstractServiceImpl implements
      * @see egovframework.let.cop.bbs.brd.service.EgovBBSManageService#updateBoardArticle(egovframework.let.cop.bbs.brd.service.Board)
      */
     public void updateBoardArticle(Board board) throws Exception {
-	bbsMngDAO.updateBoardArticle(board);
+			bbsMngDAO.updateBoardArticle(board);
     }
 
     /**

@@ -238,7 +238,7 @@ public class EgovBBSAttributeManageServiceImpl extends EgovAbstractServiceImpl i
 	    } else {
 		//수정 기능 제외 (새롭게 선택사항을 지정한 insert만 처리함)
 		//addedOptionsDAO.updateAddedOptionsInf(boardMaster);
-		LOGGER.debug("BBS Master update ignored...");
+	    	LOGGER.debug("BBS Master update ignored...");
 	    }
 	}
 	////-------------------------------
